@@ -243,8 +243,8 @@ class DoublyLinkedList {
 		} else {
 			Node T = getNodeAt(index);
 			int item = T.data;
-
-			Node S = T.prev;
+                                //  T
+			Node S = T.prev;   // 11  22  33  44  55
 
 			S.next = T.next;
 			T.next.prev = S;
@@ -255,6 +255,16 @@ class DoublyLinkedList {
 			count--;
 
 			return item;
+
+			/*Node T = getNodeAt(index); 2
+			int item = T.data;
+			T.prev.next = T.next;
+			T.next.prev = T.prev;
+			
+			T.next =null;
+			T.prev =null;
+			count --;
+			return item; */
 		}
 	}
 
