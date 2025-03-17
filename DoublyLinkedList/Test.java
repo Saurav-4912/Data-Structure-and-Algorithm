@@ -56,6 +56,23 @@ class LinkedListS {
 
     return str.toString();
   }
+
+  public void addFirst(String data){
+    if(first == null){
+      Node temp = new Node(data);
+      first = temp;
+      last=temp;
+      count++;
+    }else{
+      Node temp = new Node(data);
+      temp.next = first;
+      temp.next.prev=temp;
+      first = temp;
+      count++;
+    }
+  }
+  
+  
 }
 
 public class Test {
@@ -68,6 +85,11 @@ public class Test {
     L.add("Banglore");
 
     System.out.println("LinkedList : " + L);
+    System.out.println("No. Of Element : " + L.size());
+
+    //L.addFirst("AAA");
+
+    System.out.println("After LinkedList : " + L);
     System.out.println("No. Of Element : " + L.size());
   }
 }
