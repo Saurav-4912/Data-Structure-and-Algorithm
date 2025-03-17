@@ -1,5 +1,7 @@
 package DoublyLinkedList;
 
+import java.util.StringJoiner;
+
 class LinkedListS {
   private Node first;
   private int count;
@@ -42,15 +44,30 @@ class LinkedListS {
   {
     return count;
   }
+  public int length(){
+    return count;
+  }
+
+  public String toString(){
+    StringJoiner str = new StringJoiner(",", "[", "]");
+    for(Node temp = first; temp!=null; temp=temp.next){
+      str.add(String.valueOf(temp.data));
+    }
+
+    return str.toString();
+  }
 }
 
 public class Test {
   public static void main(String[] args) {
 
     LinkedListS L = new LinkedListS();
-    L.add("AAA");
-    L.add("BBB");
+    L.add("Pune");
+    L.add("Mumbai");
+    L.add("Delhi");
+    L.add("Banglore");
 
-    System.out.println(L.size());
+    System.out.println("LinkedList : " + L);
+    System.out.println("No. Of Element : " + L.size());
   }
 }
