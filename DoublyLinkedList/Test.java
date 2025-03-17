@@ -71,8 +71,10 @@ class LinkedListS {
       count++;
     }
   }
-  
-  
+   public void addLast(String data){
+    add(data);
+   }
+
 }
 
 public class Test {
