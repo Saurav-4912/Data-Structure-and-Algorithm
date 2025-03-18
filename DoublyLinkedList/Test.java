@@ -26,13 +26,13 @@ class LinkedListS {
     this.last = null;
   }
 
-  public void add(String data){
-    if(first==null){
+  public void add(String data) {
+    if (first == null) {
       Node temp = new Node(data);
       first = temp;
       last = temp;
       count++;
-    }else{
+    } else {
       Node temp = new Node(data);
       last.next = temp;
       last.next.prev = last;
@@ -40,40 +40,42 @@ class LinkedListS {
       count++;
     }
   }
-  public int size()
-  {
-    return count;
-  }
-  public int length(){
+
+  public int size() {
     return count;
   }
 
-  public String toString(){
+  public int length() {
+    return count;
+  }
+
+  public String toString() {
     StringJoiner str = new StringJoiner(",", "[", "]");
-    for(Node temp = first; temp!=null; temp=temp.next){
+    for (Node temp = first; temp != null; temp = temp.next) {
       str.add(String.valueOf(temp.data));
     }
 
     return str.toString();
   }
 
-  public void addFirst(String data){
-    if(first == null){
+  public void addFirst(String data) {
+    if (first == null) {
       Node temp = new Node(data);
       first = temp;
-      last=temp;
+      last = temp;
       count++;
-    }else{
+    } else {
       Node temp = new Node(data);
       temp.next = first;
-      temp.next.prev=temp;
+      temp.next.prev = temp;
       first = temp;
       count++;
     }
   }
-   public void addLast(String data){
+
+  public void addLast(String data) {
     add(data);
-   }
+  }
 
 }
 
@@ -89,7 +91,8 @@ public class Test {
     System.out.println("LinkedList : " + L);
     System.out.println("No. Of Element : " + L.size());
 
-    //L.addFirst("AAA");
+    // L.addFirst("AAA");
+    // L.addLast("AAA");
 
     System.out.println("After LinkedList : " + L);
     System.out.println("No. Of Element : " + L.size());
