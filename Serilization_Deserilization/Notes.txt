@@ -1,1 +1,21 @@
 Hello World
+
+// SERILIZATION
+
+Serilization is the process of converting java object into byte stream so it can be: 
+
+1. Saved to a file.
+2. Sent over a network.
+3. Stored in a database.
+
+serilizable interface madhe ek pn method nahi.
+It is marker interface
+jo class implement serilizable interface karto tyach class cha data binary form madhe convert hoto.
+
+
+ private static final long serialVersionUID = 1L; why we use?
+
+ Try with resource
+
+ 
+  
