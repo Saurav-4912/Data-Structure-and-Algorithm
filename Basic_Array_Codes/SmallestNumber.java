@@ -1,3 +1,4 @@
+package Basic_Array_Codes;
 public class SmallestNumber {
   public static void main(String[] args) {
     System.out.println("Hello World ");
