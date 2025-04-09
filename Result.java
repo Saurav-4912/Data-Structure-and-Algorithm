@@ -1,4 +1,4 @@
-package HackeRank;
+
 
 import java.io.*;
 
