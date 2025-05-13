@@ -21,4 +21,17 @@ public class StaticStack {
   public boolean isFull(){
     return top == capacity-1;
   }
+
+  public void push(int data) // Add element in the stack.
+	{
+		if(isFull())
+		{
+			throw new StackOverflowError("Stack is overflow");
+		}
+		else 
+		{
+			top++;
+			stack[top] = data;
+		}
+	}
 }
