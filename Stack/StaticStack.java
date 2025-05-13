@@ -67,4 +67,9 @@ public class StaticStack {
 			return stack[top];
 		}
 	}
+
+  public int size() // Return available element of stack.
+	{
+		return top+1;
+	}
 }
