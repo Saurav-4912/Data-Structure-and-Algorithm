@@ -1,5 +1,7 @@
 package Stack;
 
+import java.util.EmptyStackException;
+
 public class StaticStack {
   int stack[];
   int top;
@@ -32,6 +34,22 @@ public class StaticStack {
 		{
 			top++;
 			stack[top] = data;
+		}
+	}
+
+  public int pop() // Remove top most element from stack.
+	{
+		if(isEmpty())
+		{
+			throw new EmptyStackException();
+		}
+		else
+		{
+			int data = stack[top];
+			top--;
+			
+			return data;
+			
 		}
 	}
 }
