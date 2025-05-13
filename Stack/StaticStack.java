@@ -52,4 +52,19 @@ public class StaticStack {
 			
 		}
 	}
+
+  public int peek() // To get top most element of stack but not remove from stack.
+	{
+		if(isEmpty())
+		{
+			throw new EmptyStackException();
+		}else 
+		{
+			/*
+			int data = stack[top];
+			return data;
+			*/
+			return stack[top];
+		}
+	}
 }
