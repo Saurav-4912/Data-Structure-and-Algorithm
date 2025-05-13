@@ -1,6 +1,7 @@
 package Stack;
 
 import java.util.EmptyStackException;
+import java.util.StringJoiner;
 
 public class StaticStack {
   int stack[];
@@ -71,5 +72,19 @@ public class StaticStack {
   public int size() // Return available element of stack.
 	{
 		return top+1;
+	}
+
+  	
+	public String toString() // To print the data of stack.
+	{
+		StringJoiner sj = new StringJoiner("," , "[" , "]");
+		
+		for(int i = 0 ; i<=top ; i++)
+		{
+			sj.add(String.valueOf(stack[i]));
+			
+		}
+		return sj.toString();
+
 	}
 }
