@@ -70,8 +70,16 @@ public class StaticQueue {
 			return queue[front+1];
 		}
 	}
-  
-  //Remove first data from the queue
 
+  //Remove first data from the queue
+  public Integer poll() {
+        if (isEmpty()) {
+            return null;
+        } else {
+            front++;
+            return queue[front];
+        }
+    }
+    
   // Print queue using toString() method
 }
