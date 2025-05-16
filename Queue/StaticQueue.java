@@ -15,4 +15,9 @@ public class StaticQueue {
 		
 		front = -1;
 	}
+
+  // Check Static Queue is empty or not
+  public boolean isEmpty(){
+    return rear == front;
+  }
 }
