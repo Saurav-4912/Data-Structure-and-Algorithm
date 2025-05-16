@@ -60,9 +60,17 @@ public class StaticQueue {
 			return queue[front];
 		}
 	}
-  
-  //To get first data from the queue
 
+  //To get first data from the queue
+  public Integer peek() {
+		if(isEmpty()) {
+			return null;
+		}else {
+			
+			return queue[front+1];
+		}
+	}
+  
   //Remove first data from the queue
 
   // Print queue using toString() method
