@@ -20,4 +20,21 @@ public class StaticQueue {
   public boolean isEmpty(){
     return rear == front;
   }
+
+  // Check Static Queue is full or not
+  public boolean isFull() {
+		return rear == queue.length-1;
+	}
+
+  // Add data into the queue
+
+  // Add data into the queue
+
+  // Remove first data from queue
+
+  //To get first data from the queue
+
+  //Remove first data from the queue
+
+  // Print queue using toString() method
 }
