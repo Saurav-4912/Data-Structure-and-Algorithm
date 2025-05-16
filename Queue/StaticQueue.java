@@ -36,8 +36,18 @@ public class StaticQueue {
 			return true;
 		}
 	}
-  
+
   // Add data into the queue
+  public boolean offer(int item) {
+		if(isFull()) {
+			return false;
+		}else {
+			rear++;
+			queue[rear] = item;
+			return true;
+		}
+	}
+
 
   // Remove first data from queue
 
