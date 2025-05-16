@@ -27,7 +27,16 @@ public class StaticQueue {
 	}
 
   // Add data into the queue
-
+  public boolean add(int item) {
+		if(isFull()) {
+			throw new IllegalStateException("Queue is Full");
+		}else {
+			rear++;
+			queue[rear] = item;
+			return true;
+		}
+	}
+  
   // Add data into the queue
 
   // Remove first data from queue
