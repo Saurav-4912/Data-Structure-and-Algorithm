@@ -1,0 +1,3 @@
+Queue is linear data structure.
+Queue is implemented using array and linkedlist.
+Queue data structure can grow and shrink dyanamically.
