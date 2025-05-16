@@ -1,6 +1,7 @@
 package Queue;
 
 import java.util.NoSuchElementException;
+import java.util.StringJoiner;
 
 public class StaticQueue {
   private int queue[];
@@ -80,6 +81,17 @@ public class StaticQueue {
             return queue[front];
         }
     }
-    
+
   // Print queue using toString() method
+  public String toString() // To print the data of stack.
+	{
+		StringJoiner sj = new StringJoiner("," , "[" , "]");
+		
+		  for (int i = front + 1; i <= rear; i++) 
+		  {
+		        sj.add(String.valueOf(queue[i]));
+		    }
+		return sj.toString();
+
+	}
 }
