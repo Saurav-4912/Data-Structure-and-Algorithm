@@ -1,5 +1,7 @@
 package Queue;
 
+import java.util.NoSuchElementException;
+
 public class StaticQueue {
   private int queue[];
 	
@@ -50,7 +52,15 @@ public class StaticQueue {
 
 
   // Remove first data from queue
-
+  public int remove() {
+		if(isEmpty()) {
+			throw new NoSuchElementException("Queue is Empty");
+		}else {
+			front++;
+			return queue[front];
+		}
+	}
+  
   //To get first data from the queue
 
   //Remove first data from the queue
