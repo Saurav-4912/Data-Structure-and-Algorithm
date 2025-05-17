@@ -79,6 +79,19 @@ public class DynamicStack {
 				return data;
 			}
 		}
-
 	}
+
+  // Get topmost element from stack instead of removing data
+  public int peek() 
+	{
+		if (isEmpty())
+		{
+			throw new EmptyStackException();
+		}
+		else 
+		{	
+			return top.data;
+		}
+	}
+
 }
