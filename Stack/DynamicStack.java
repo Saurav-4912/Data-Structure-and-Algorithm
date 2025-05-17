@@ -1,6 +1,7 @@
 package Stack;
 
 import java.util.EmptyStackException;
+import java.util.StringJoiner;
 
 public class DynamicStack {
   
@@ -92,6 +93,17 @@ public class DynamicStack {
 		{	
 			return top.data;
 		}
+	}
+
+  // Added toString() method
+  public String toString() {
+		StringJoiner sj = new StringJoiner(",", "[", "]");
+
+		for (Node T = first; T != null; T = T.next) {
+			sj.add(String.valueOf(T.data));
+		}
+
+		return sj.toString();
 	}
 
 }
