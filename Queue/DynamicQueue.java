@@ -15,7 +15,21 @@ class DynamicQueue {
 		return first == null; // count = 0; or first == last
 	}
 
-  
+  	public boolean add(int item) {
+		Node node = new Node(item);
+		if (first == null) {
+			first = node;
+			last = node;
+			count++;
+			return true;
+		} else {
+			last.next = node;
+			node.prev = last;
+			last = node;
+			count++;
+			return true;
+		}
+	}
 
 	private static class Node {
 		private Node next;
