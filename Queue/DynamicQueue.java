@@ -31,6 +31,11 @@ class DynamicQueue {
 		}
 	}
 
+
+  public boolean offer(int item) {
+		return add(item);
+	}
+
 	private static class Node {
 		private Node next;
 		private Node prev;
