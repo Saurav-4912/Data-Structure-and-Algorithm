@@ -11,6 +11,12 @@ class DynamicQueue {
 		this.count = 0;
 	}
 
+  	public boolean isEmpty() {
+		return first == null; // count = 0; or first == last
+	}
+
+  
+
 	private static class Node {
 		private Node next;
 		private Node prev;
