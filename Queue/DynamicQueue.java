@@ -1,5 +1,7 @@
 package Queue;
 
+import java.util.NoSuchElementException;
+
 class DynamicQueue {
   private Node first;
 	private Node last;
@@ -30,6 +32,27 @@ class DynamicQueue {
 			return true;
 		}
 	}
+  public int remove() {
+		if (isEmpty()) {
+			throw new NoSuchElementException("Queue is Empty");
+		} else {
+			if (first == last) {
+				int item = first.data;
+				first = last = null;
+				count = 0;
+				return item;
+			}
+			int item = first.data;
+			Node node = first;
+			first = first.next;
+			node.next.prev = null;
+			node.next = null;
+
+			count--;
+			return item;
+		}
+	}
+
 
 
   public boolean offer(int item) {
