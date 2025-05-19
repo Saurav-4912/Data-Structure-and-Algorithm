@@ -1,6 +1,7 @@
 package Queue;
 
 import java.util.NoSuchElementException;
+import java.util.StringJoiner;
 
 class DynamicQueue {
   private Node first;
@@ -53,7 +54,34 @@ class DynamicQueue {
 		}
 	}
 
+	public String toString() {
+		StringJoiner sj = new StringJoiner(",", "[", "]");
 
+		for (Node node = first; node != null; node = node.next) {
+			sj.add(String.valueOf(node.data));
+		}
+		return sj.toString();
+	}
+
+	public Integer poll() {
+		if (isEmpty()) {
+			return null;
+		} else {
+			return remove();
+		}
+	}
+
+	public Integer peek() {
+		if (isEmpty()) {
+			return null;
+		} else {
+			return first.data;
+		}
+	}
+
+	public int size() {
+		return count;
+	}
 
   public boolean offer(int item) {
 		return add(item);
