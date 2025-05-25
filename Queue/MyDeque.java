@@ -94,4 +94,29 @@ public class MyDeque {
 			return item;
 		}
 	}
+
+  // Remove last data
+
+  public int removeLast() {
+		if (isEmpty()) {
+			throw new NoSuchElementException("Queue is Empty");
+		} else {
+			if (first == last) // When only one node is present in dequeue
+			{
+				int item = last.data;
+				first = last = null;
+				count = 0;
+				return item;
+			}
+			int item = last.data;
+			Node node = last;
+			last = last.prev;
+			last.next = null;
+			node.prev = null;
+
+			count--;
+			return item;
+		}
+
+	}
 }
