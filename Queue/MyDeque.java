@@ -119,4 +119,18 @@ public class MyDeque {
 		}
 
 	}
+
+  public int size() {
+		return count;
+	}
+
+	public Integer peekFirst() {
+		if (isEmpty()) {
+			return null;
+		} else {
+			return first.data;
+		}
+
+	}
+
 }
