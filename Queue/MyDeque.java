@@ -1,5 +1,7 @@
 package Queue;
 
+import java.util.NoSuchElementException;
+
 public class MyDeque {
   private Node first;
 	private Node last;
@@ -69,4 +71,27 @@ public class MyDeque {
 		}
 	}
 
+
+  // Remove first data
+  public int removeFirst() {
+		if (isEmpty()) {
+			throw new NoSuchElementException("Queue is Empty");
+		} else {
+			if (first == last) // When only one node is present in dequeue
+			{
+				int item = first.data;
+				first = last = null;
+				count = 0;
+				return item;
+			}
+			int item = first.data;
+			Node node = first;
+			first = first.next;
+			node.next.prev = null;
+			node.next = null;
+
+			count--;
+			return item;
+		}
+	}
 }
