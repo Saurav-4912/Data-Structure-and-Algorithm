@@ -1,6 +1,7 @@
 package Queue;
 
 import java.util.NoSuchElementException;
+import java.util.StringJoiner;
 
 public class MyDeque {
   private Node first;
@@ -132,5 +133,21 @@ public class MyDeque {
 		}
 
 	}
+public Integer peekLast() {
+		if (isEmpty()) {
+			return null;
+		} else {
+			return last.data;
+		}
 
+	}
+
+	public String toString() {
+		StringJoiner sj = new StringJoiner(",", "[", "]");
+
+		for (Node node = first; node != null; node = node.next) {
+			sj.add(String.valueOf(node.data));
+		}
+		return sj.toString();
+	}
 }
