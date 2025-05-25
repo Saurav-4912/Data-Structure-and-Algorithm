@@ -28,4 +28,27 @@ public class MyDeque {
 		return first == null;
 	}
 
+  // Add data to first
+  public boolean addFirst(int data) {
+		Node node = null;
+		try {
+			node = new Node(data);
+		} catch (Exception e) {
+			return false; // unable to allocate object on heap
+		}
+		if (first == null) {
+			first = node;
+			last = node;
+			count = 1;
+			return true;
+		} else {
+			node.next = first;
+			first.prev = node;
+			first = node;
+			count++;
+			return true;
+		}
+
+	}
+
 }
