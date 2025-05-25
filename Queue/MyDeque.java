@@ -23,4 +23,9 @@ public class MyDeque {
 		}
 	}
 
+  // To check MyDeque is empty or not
+  public boolean isEmpty() {
+		return first == null;
+	}
+
 }
