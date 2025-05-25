@@ -51,4 +51,22 @@ public class MyDeque {
 
 	}
 
+  // Add data to last
+  	public boolean addLast(int data) {
+
+		Node node = new Node(data);
+		if (first == null) {
+			first = node;
+			last = node;
+			count = 1;
+			return true;
+		} else {
+			last.next = node;
+			node.prev = last;
+			last = last.next;
+			count++;
+			return true;
+		}
+	}
+
 }
