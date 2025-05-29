@@ -1,6 +1,8 @@
 class Pattern1 {
   public static void main(String[] args) {
     int n = 4;
+
+    printSquare(n);
   }
 
   public static void printSquare(int n) {
