@@ -1,6 +1,5 @@
 package LogicQuestions_40;
 
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 
 public class RemoveDuplicate {
